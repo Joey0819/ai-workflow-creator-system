@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --canvas: #11100e;
+        --panel: #1b1a17;
+        --paper: #f4ead8;
+        --ink: #171411;
+        --mint: #20d6a2;
+        --mint-soft: #9af0d4;
+        --coral: #ff6b57;
+        --amber: #ffca4f;
+        --green: #18382f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--canvas);
+        color: var(--paper);
+        font-family: sans-serif;
+        letter-spacing: 0;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--canvas);
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: -22px -14px;
+        width: calc(100% + 28px);
+        height: calc(100% + 44px);
+        object-fit: cover;
+        filter: saturate(1.08) contrast(1.04);
+      }
+
+      .shade {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(17, 16, 14, 0.2) 0%, rgba(17, 16, 14, 0.08) 38%, rgba(17, 16, 14, 0.84) 73%, rgba(17, 16, 14, 0.96) 100%),
+          linear-gradient(90deg, rgba(17, 16, 14, 0.58), transparent 28%, transparent 68%, rgba(17, 16, 14, 0.42));
+      }
+
+      .safe-frame {
+        position: absolute;
+        top: 150px;
+        right: 62px;
+        bottom: 245px;
+        left: 62px;
+        border: 2px dashed rgba(154, 240, 212, 0.16);
+        border-radius: 24px;
+        pointer-events: none;
+      }
+
+      .texture {
+        position: absolute;
+        inset: 0;
+        opacity: 0.18;
+        pointer-events: none;
+        background:
+          repeating-linear-gradient(0deg, rgba(244, 234, 216, 0.08) 0 1px, transparent 1px 8px),
+          repeating-linear-gradient(90deg, rgba(32, 214, 162, 0.08) 0 1px, transparent 1px 90px);
+      }
+
+      .scene-content {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 138px 62px 226px;
+        gap: 24px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 72px;
+      }
+
+      .series {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--mint-soft);
+        font-size: 27px;
+        font-weight: 900;
+      }
+
+      .dot {
+        width: 17px;
+        height: 17px;
+        border-radius: 999px;
+        background: var(--mint);
+        box-shadow: 0 0 28px rgba(32, 214, 162, 0.78);
+      }
+
+      .badge {
+        padding: 16px 20px;
+        border: 2px solid rgba(244, 234, 216, 0.2);
+        border-radius: 999px;
+        background: rgba(17, 16, 14, 0.6);
+        color: var(--paper);
+        font-size: 25px;
+        font-weight: 900;
+      }
+
+      .title-card {
+        margin-top: 520px;
+        padding: 28px 30px 30px;
+        border: 2px solid rgba(255, 202, 79, 0.42);
+        border-radius: 28px;
+        background: rgba(17, 16, 14, 0.72);
+        box-shadow: 0 28px 74px rgba(0, 0, 0, 0.38);
+        backdrop-filter: blur(8px);
+      }
+
+      .kicker {
+        color: var(--amber);
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .title {
+        margin-top: 12px;
+        color: var(--paper);
+        font-size: 82px;
+        font-weight: 900;
+        line-height: 1.02;
+      }
+
+      .subtitle {
+        margin-top: 16px;
+        color: rgba(244, 234, 216, 0.82);
+        font-size: 27px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .flow-card {
+        min-height: 116px;
+        padding: 20px;
+        border: 2px solid rgba(154, 240, 212, 0.24);
+        border-radius: 22px;
+        background: rgba(24, 56, 47, 0.78);
+      }
+
+      .flow-card b {
+        display: block;
+        color: var(--mint-soft);
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .flow-card span {
+        display: block;
+        margin-top: 12px;
+        color: var(--paper);
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.12;
+      }
+
+      .language-panel {
+        padding: 24px 26px;
+        border-radius: 24px;
+        color: var(--ink);
+        background: var(--paper);
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.34);
+      }
+
+      .language-panel strong {
+        display: block;
+        color: #b7342a;
+        font-size: 31px;
+        font-weight: 900;
+      }
+
+      .language-panel p {
+        margin: 12px 0 0;
+        font-size: 30px;
+        font-weight: 850;
+        line-height: 1.2;
+      }
+
+      .caption-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: auto;
+      }
+
+      .caption-zh {
+        min-height: 126px;
+        padding: 21px 26px;
+        border-radius: 22px;
+        color: var(--ink);
+        background: var(--amber);
+        font-size: 39px;
+        font-weight: 900;
+        line-height: 1.16;
+        text-align: center;
+        box-shadow: 0 22px 58px rgba(0, 0, 0, 0.35);
+      }
+
+      .caption-en {
+        min-height: 74px;
+        padding: 14px 22px;
+        border: 2px solid rgba(244, 234, 216, 0.22);
+        border-radius: 18px;
+        color: var(--paper);
+        background: rgba(17, 16, 14, 0.78);
+        font-size: 23px;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .cta {
+        position: absolute;
+        right: 62px;
+        bottom: 88px;
+        left: 62px;
+        z-index: 4;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 18px;
+        min-height: 126px;
+        padding: 24px 28px;
+        border-radius: 24px;
+        background: #18382f;
+        color: var(--paper);
+        box-shadow: 0 24px 66px rgba(0, 0, 0, 0.38);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 33px;
+        font-weight: 900;
+        line-height: 1.14;
+      }
+
+      .cta span {
+        display: block;
+        margin-top: 6px;
+        color: rgba(244, 234, 216, 0.84);
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .cta-mark {
+        display: grid;
+        place-items: center;
+        width: 84px;
+        height: 84px;
+        border-radius: 22px;
+        color: var(--paper);
+        background: #11100e;
+        font-size: 30px;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="32"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="ai-architect-video" class="clip" data-start="0" data-duration="32" data-track-index="0">
+        <div class="hero" data-layout-allow-overflow>
+          <img class="hero-image" src="assets/ai-architect-anime.png" alt="Anime AI architect with intelligent system blueprint" />
+          <div class="shade" data-layout-ignore></div>
+          <div class="texture" data-layout-ignore></div>
+        </div>
+        <div class="safe-frame" data-layout-ignore></div>
+
+        <main class="scene-content">
+          <section class="topbar">
+            <div class="series"><span class="dot"></span>AI 架构师 · 智能语言版</div>
+            <div class="badge">Douyin 32s</div>
+          </section>
+
+          <section class="title-card">
+            <div class="kicker">3秒钩子 / Hook</div>
+            <div class="title">AI架构师到底在架构什么？</div>
+            <div class="subtitle">What does an AI architect actually design?</div>
+          </section>
+
+          <section class="flow">
+            <div class="flow-card">
+              <b>01 GOAL</b>
+              <span>目标是什么</span>
+            </div>
+            <div class="flow-card">
+              <b>02 DATA</b>
+              <span>数据从哪里来</span>
+            </div>
+            <div class="flow-card">
+              <b>03 MODEL</b>
+              <span>何时回答</span>
+            </div>
+            <div class="flow-card">
+              <b>04 TOOL</b>
+              <span>何时调用工具</span>
+            </div>
+          </section>
+
+          <section class="language-panel">
+            <strong>智能语言 / Intelligent Language</strong>
+            <p>把业务、数据、模型和工具串成一个会反馈的闭环系统。</p>
+          </section>
+
+          <section class="caption-stack">
+            <div class="caption-zh">AI架构师真正设计的，是智能怎么在系统里流动。</div>
+            <div class="caption-en">An AI architect designs how intelligence moves through a system.</div>
+          </section>
+        </main>
+
+        <section class="cta">
+          <div>
+            <strong>关注我，下一条拆 AI 架构师工作流</strong>
+            <span>Follow for the next AI architect workflow breakdown.</span>
+          </div>
+          <div class="cta-mark">AI</div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const duration = 32;
+      const pulseRepeats = Math.ceil(duration / 1.2) - 1;
+
+      tl.from(".topbar", { y: -30, opacity: 0, duration: 0.42, ease: "power3.out" }, 0.08);
+      tl.from(".hero-image", { scale: 1.045, opacity: 0, duration: 0.82, ease: "sine.out" }, 0.12);
+      tl.from(".title-card", { y: 44, opacity: 0, duration: 0.58, ease: "power3.out" }, 0.55);
+      tl.from(".kicker", { x: -20, opacity: 0, duration: 0.32, ease: "power2.out" }, 0.86);
+      tl.from(".title", { y: 32, opacity: 0, duration: 0.44, ease: "power3.out" }, 1.05);
+      tl.from(".subtitle", { y: 22, opacity: 0, duration: 0.34, ease: "power2.out" }, 1.28);
+      tl.from(".flow-card", { y: 34, opacity: 0, duration: 0.42, ease: "power3.out", stagger: 0.12 }, 5.0);
+      tl.from(".language-panel", { y: 38, duration: 0.48, ease: "power3.out" }, 13.4);
+      tl.from(".caption-zh", { y: 14, opacity: 0, duration: 0.4, ease: "power3.out" }, 20.8);
+      tl.from(".caption-en", { y: 10, opacity: 0, duration: 0.34, ease: "power2.out" }, 21.1);
+      tl.from(".cta", { y: 62, duration: 0.56, ease: "back.out(1.35)" }, 27.2);
+      tl.to(".hero-image", { scale: 1.075, y: -24, duration: 22, ease: "sine.inOut" }, 2.0);
+      tl.to(".dot", { scale: 1.22, opacity: 0.68, duration: 0.6, ease: "sine.inOut", repeat: pulseRepeats, yoyo: true }, 0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

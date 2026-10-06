@@ -1,0 +1,45 @@
+{
+  "projectName": "AI Workflow Creator System",
+  "platform": "douyin",
+  "cadence": "daily",
+  "angle": "real-workflows",
+  "languageMode": "bilingual-captions",
+  "creatorIdentity": "faceless-operator-plus-avatar",
+  "avatar": {
+    "mode": "intro-outro",
+    "provider": "heygen",
+    "envVar": "HEYGEN_AVATAR_ID",
+    "fallback": "animated-text-avatar-card"
+  },
+  "durationRangeSeconds": {
+    "min": 20,
+    "max": 35
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "format": "mp4",
+    "safeZone": {
+      "top": 160,
+      "right": 72,
+      "bottom": 260,
+      "left": 72
+    }
+  },
+  "captionStyle": {
+    "primaryLanguage": "zh-CN",
+    "secondaryLanguage": "en",
+    "chineseMaxCharsPerBeat": 18,
+    "englishMaxWordsPerBeat": 9
+  },
+  "tone": {
+    "chinese": "直接、实操、像在拆解真实工作流",
+    "english": "concise, practical, operator-focused"
+  },
+  "openai": {
+    "defaultModel": "gpt-5.4-mini",
+    "upgradeModelEnv": "OPENAI_MODEL",
+    "apiMode": "responses"
+  }
+}

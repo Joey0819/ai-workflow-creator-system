@@ -1,0 +1,47 @@
+{
+  "batchId": "batch-001",
+  "topics": [
+    {
+      "id": "day-01",
+      "title": "I gave Codex a vague idea; it forced a usable plan.",
+      "hookZh": "我只给 Codex 一个很模糊的想法。",
+      "hookEn": "I gave Codex a vague idea."
+    },
+    {
+      "id": "day-02",
+      "title": "One ChatGPT prompt that turns messy thoughts into short-video hooks.",
+      "hookZh": "脑子很乱时，我先不写脚本。",
+      "hookEn": "When my thoughts are messy, I do not start with a script."
+    },
+    {
+      "id": "day-03",
+      "title": "ChatGPT writes the script; Codex builds the production folder.",
+      "hookZh": "ChatGPT 负责想内容，Codex 负责把它变成项目。",
+      "hookEn": "ChatGPT writes; Codex packages the workflow."
+    },
+    {
+      "id": "day-04",
+      "title": "Why 'make it viral' is a weak AI prompt.",
+      "hookZh": "让 AI 帮你爆火，通常是一个弱提示词。",
+      "hookEn": "'Make it viral' is usually a weak prompt."
+    },
+    {
+      "id": "day-05",
+      "title": "Turning an AI failure into tomorrow's video.",
+      "hookZh": "今天 AI 翻车，明天就能变成选题。",
+      "hookEn": "Today’s AI failure can become tomorrow’s video."
+    },
+    {
+      "id": "day-06",
+      "title": "My daily AI creator pipeline in 30 seconds.",
+      "hookZh": "我把每天做视频拆成四步。",
+      "hookEn": "My daily creator pipeline has four steps."
+    },
+    {
+      "id": "day-07",
+      "title": "Faceless plus avatar: what I would automate first.",
+      "hookZh": "不露脸也能做账号，但别一开始就全自动。",
+      "hookEn": "Faceless can work, but do not automate everything first."
+    }
+  ]
+}

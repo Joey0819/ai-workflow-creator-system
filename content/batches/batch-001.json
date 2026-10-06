@@ -1,0 +1,303 @@
+{
+  "batchId": "batch-001",
+  "generatedAt": "fixture",
+  "generationMode": "fixture-only",
+  "platform": "douyin",
+  "cadence": "daily",
+  "angle": "real-workflows",
+  "languageMode": "bilingual-captions",
+  "creatorIdentity": "faceless-operator-plus-avatar",
+  "durationRangeSeconds": {
+    "min": 20,
+    "max": 35
+  },
+  "scripts": [
+    {
+      "id": "day-01",
+      "day": 1,
+      "topic": "I gave Codex a vague idea; it forced a usable plan.",
+      "titleZh": "模糊想法变成可执行计划",
+      "titleEn": "I gave Codex a vague idea; it forced a usable plan.",
+      "hookZh": "我只给 Codex 一个很模糊的想法。",
+      "hookEn": "I gave Codex a vague idea.",
+      "spokenScriptZh": "我只说想做 AI 创作者，Codex 没有直接写鸡汤，它先逼我定平台、频率、语言和第一批选题。这个动作很关键：AI 不是替你努力，而是把模糊愿望压成下一步。",
+      "englishSubtitle": "Codex turned a vague creator idea into a concrete production plan.",
+      "onScreenText": [
+        "模糊想法",
+        "平台 + 频率 + 语言",
+        "第一批选题",
+        "下一步"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "模糊想法变成可执行计划。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "Codex turned a vague creator idea into a concrete production plan."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-02",
+      "day": 2,
+      "topic": "One ChatGPT prompt that turns messy thoughts into short-video hooks.",
+      "titleZh": "把混乱想法变成短视频钩子",
+      "titleEn": "One ChatGPT prompt that turns messy thoughts into short-video hooks.",
+      "hookZh": "脑子很乱时，我先不写脚本。",
+      "hookEn": "When my thoughts are messy, I do not start with a script.",
+      "spokenScriptZh": "我现在会先让 ChatGPT 提取冲突：我以为的问题、观众真正关心的点、三秒内能听懂的钩子。脚本不是第一步，钩子才是。",
+      "englishSubtitle": "Extract the conflict before writing the script.",
+      "onScreenText": [
+        "不要先写全文",
+        "先提取冲突",
+        "3 秒钩子",
+        "再写脚本"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "把混乱想法变成短视频钩子。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "Extract the conflict before writing the script."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-03",
+      "day": 3,
+      "topic": "ChatGPT writes the script; Codex builds the production folder.",
+      "titleZh": "脚本和项目分工",
+      "titleEn": "ChatGPT writes the script; Codex builds the production folder.",
+      "hookZh": "ChatGPT 负责想内容，Codex 负责把它变成项目。",
+      "hookEn": "ChatGPT writes; Codex packages the workflow.",
+      "spokenScriptZh": "ChatGPT 更适合扩展表达，Codex 更适合落地结构。我会让 ChatGPT 产出脚本，再让 Codex 建文件夹、模板、检查命令和渲染流程。",
+      "englishSubtitle": "ChatGPT expands the idea; Codex makes it production-ready.",
+      "onScreenText": [
+        "ChatGPT: 内容",
+        "Codex: 结构",
+        "模板",
+        "检查与渲染"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "脚本和项目分工。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "ChatGPT expands the idea; Codex makes it production-ready."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-04",
+      "day": 4,
+      "topic": "Why 'make it viral' is a weak AI prompt.",
+      "titleZh": "为什么“帮我爆火”是弱提示",
+      "titleEn": "Why 'make it viral' is a weak AI prompt.",
+      "hookZh": "让 AI 帮你爆火，通常是一个弱提示词。",
+      "hookEn": "'Make it viral' is usually a weak prompt.",
+      "spokenScriptZh": "帮我爆火太空了。更好的问法是：给我十个真实工作流视频钩子，每个都包含反常识、屏幕动作和观众能复制的一步。",
+      "englishSubtitle": "'Make it viral' is vague. Ask for constraints people can copy.",
+      "onScreenText": [
+        "弱提示: 帮我爆火",
+        "强提示: 场景",
+        "屏幕动作",
+        "可复制一步"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "为什么“帮我爆火”是弱提示。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "'Make it viral' is vague. Ask for constraints people can copy."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-05",
+      "day": 5,
+      "topic": "Turning an AI failure into tomorrow's video.",
+      "titleZh": "把 AI 翻车变成内容",
+      "titleEn": "Turning an AI failure into tomorrow's video.",
+      "hookZh": "今天 AI 翻车，明天就能变成选题。",
+      "hookEn": "Today’s AI failure can become tomorrow’s video.",
+      "spokenScriptZh": "如果 AI 生成错了，我不会直接删掉。我会记录：哪里错、为什么错、我怎么改提示词。这个修复过程本身就是观众想看的真实工作流。",
+      "englishSubtitle": "An AI failure becomes content when you show the repair process.",
+      "onScreenText": [
+        "AI 翻车",
+        "记录错误",
+        "修改提示词",
+        "变成选题"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "把 AI 翻车变成内容。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "An AI failure becomes content when you show the repair process."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-06",
+      "day": 6,
+      "topic": "My daily AI creator pipeline in 30 seconds.",
+      "titleZh": "我的每日 AI 创作者流水线",
+      "titleEn": "My daily AI creator pipeline in 30 seconds.",
+      "hookZh": "我把每天做视频拆成四步。",
+      "hookEn": "My daily creator pipeline has four steps.",
+      "spokenScriptZh": "每天四步：先收一个真实问题，再让 ChatGPT 拆钩子，然后用 Codex 固化成项目文件，最后只渲染一个能发布的版本。",
+      "englishSubtitle": "One problem, one hook, one project folder, one rendered video.",
+      "onScreenText": [
+        "真实问题",
+        "钩子",
+        "项目文件",
+        "渲染发布"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "我的每日 AI 创作者流水线。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "One problem, one hook, one project folder, one rendered video."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    },
+    {
+      "id": "day-07",
+      "day": 7,
+      "topic": "Faceless plus avatar: what I would automate first.",
+      "titleZh": "不露脸加数字人，先自动化哪里",
+      "titleEn": "Faceless plus avatar: what I would automate first.",
+      "hookZh": "不露脸也能做账号，但别一开始就全自动。",
+      "hookEn": "Faceless can work, but do not automate everything first.",
+      "spokenScriptZh": "我的 v1 不让数字人讲完整条视频，只放开头和结尾。主体还是屏幕、字幕和工作流。先稳定内容，再增加人格化包装。",
+      "englishSubtitle": "Use the avatar as framing first, not the whole show.",
+      "onScreenText": [
+        "不露脸",
+        "数字人开场",
+        "主体看工作流",
+        "先稳内容"
+      ],
+      "shotList": [
+        "0-3s: AI-avatar/text intro frames the problem.",
+        "3-9s: Faceless screen area shows the prompt/workflow step.",
+        "9-21s: Bilingual captions explain the practical takeaway.",
+        "21-28s: End card gives one copyable action."
+      ],
+      "avatarCue": "Intro/outro only. Use HEYGEN_AVATAR_ID if configured; otherwise show animated avatar placeholder card.",
+      "screenCue": "Show a douyin vertical workflow board for real-workflows: prompt, Codex task, output, publish checklist.",
+      "caption": {
+        "zh": "不露脸加数字人，先自动化哪里。我会继续用真实 AI 工作流记录从想法到视频的过程。",
+        "en": "Use the avatar as framing first, not the whole show."
+      },
+      "hashtags": [
+        "#AI工作流",
+        "#ChatGPT",
+        "#Codex",
+        "#短视频创作",
+        "#AICreator"
+      ],
+      "cta": {
+        "zh": "关注我，看我每天把一个 AI 工作流做成视频。",
+        "en": "Follow for one practical AI creator workflow every day."
+      },
+      "estimatedSeconds": 28
+    }
+  ]
+}
